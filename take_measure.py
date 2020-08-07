@@ -27,5 +27,7 @@ curr_time = datetime.today().strftime('%H:%M:%S')
 filename = 'temperatures-%s' % curr_date
 file_path = '%s/%s' % (data_folder, filename)
 
+os.system('mkdir %s 2>/dev/null' % data_folder)
+
 with open(file_path, 'a+') as f:
 	f.write('%s -> \t%s\n' % (curr_time, curr_temperature))
