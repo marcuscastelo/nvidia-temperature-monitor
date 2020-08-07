@@ -1,0 +1,10 @@
+[Unit]
+Description=Temperature monitor for Nvidia GPU
+Requires=nvidia-temperature-monitor-timered.service
+
+[Timer]
+OnActiveSec=1800
+OnUnitInactiveSec=1800
+
+[Install]
+WantedBy=timers.target

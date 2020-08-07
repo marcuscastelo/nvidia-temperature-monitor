@@ -1,0 +1,12 @@
+[Unit]
+Description=Temperature monitor for Nvidia GPU
+
+[Service]
+WorkingDirectory=/home/marucs/Development/RandomProjects/nvidia-temperature-monitor
+ExecStart=/home/marucs/Development/RandomProjects/nvidia-temperature-monitor/take_measure.py
+Type=oneshot
+User=marucs
+Group=marucs
+
+[Install]
+WantedBy=default.target
